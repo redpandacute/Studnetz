@@ -14,7 +14,7 @@ import java.util.Map;
 public class BcryptRegisterRequest extends StringRequest {
 
 
-    private static final String register_URL = "http://ef-informatik.umbach.ch/students/hirtzf/PHP/register_bcrypt.php";
+    private static final String register_URL = "http://ef-informatik.umbach.ch/students/hirtzf/PHP/final/register_bcrypt.php";
     private Map<String, String> params;
 
     public BcryptRegisterRequest(String username, String name, String firstname, String school, int grade, String email, String password, Response.Listener<String> listener) {

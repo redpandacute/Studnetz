@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class SmallProfilePicturesRequest extends StringRequest {
 
-    private static final String URL = "http://ef-informatik.umbach.ch/students/hirtzf/PHP/smallimages_php_v2.php";
+    private static final String URL = "http://ef-informatik.umbach.ch/students/hirtzf/PHP/final/smallimages.php";
     private Map<String, String> params;
 
     public SmallProfilePicturesRequest(int[] ids, Response.Listener<String> listener) {

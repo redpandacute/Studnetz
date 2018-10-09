@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class BigProfilePictureRequest extends StringRequest {
 
-    private static final String URL = "http://ef-informatik.umbach.ch/students/hirtzf/PHP/profilepicture_big_php.php";
+    private static final String URL = "http://ef-informatik.umbach.ch/students/hirtzf/PHP/final/profilepicture_big_php.php";
     private Map<String, String> params;
 
     public BigProfilePictureRequest(int id, Response.Listener<String> listener) {

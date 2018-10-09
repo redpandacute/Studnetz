@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class BcryptSaveSettingsRequest extends StringRequest {
 
-    private static final String savesettings_pw_URL = "http://ef-informatik.umbach.ch/students/hirtzf/PHP/savesettings_bcrypt.php";
+    private static final String savesettings_pw_URL = "http://ef-informatik.umbach.ch/students/hirtzf/PHP/final/savesettings_bcrypt.php";
     private Map<String, String> params;
 
     public BcryptSaveSettingsRequest(int id,
