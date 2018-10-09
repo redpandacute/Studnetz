@@ -2,7 +2,6 @@ package hirtz.florian.matura.ksa.studnetz.fragments.UserProfile;
 
 import com.android.volley.Response;
 
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -10,7 +9,7 @@ import hirtz.florian.matura.ksa.studnetz.activities.main.MainActivity;
 import hirtz.florian.matura.ksa.studnetz.util.TempFileGenerator;
 
 /**
- * Created by ingli on 12.08.2018.
+ * Created by Florian Hirtz on 12.08.2018.
  */
 
 class OnBigPictureResponseListener implements Response.Listener<String> {
@@ -30,7 +29,6 @@ class OnBigPictureResponseListener implements Response.Listener<String> {
 
             JSONObject jsn = new JSONObject(response);
             boolean success = jsn.getBoolean("success");
-            System.out.println(success);
 
             if (success) {
                 String tempPath = new TempFileGenerator().getTempFilePath(mActivity.getBaseContext(), jsn.getString("blob_profilepicture_big"));

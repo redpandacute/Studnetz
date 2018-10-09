@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by ingli on 22.08.2018.
+ * Created by Florian Hirtz on 22.08.2018.
  */
 
 public class MyReader {
@@ -22,7 +22,14 @@ public class MyReader {
         this.mContext = mContext;
     }
 
-    //https://stackoverflow.com/questions/30417810/reading-from-a-text-file-in-android-studio-java
+
+    /***************************************************************************************
+     *    Title: Reading from a Text file in Android Studio Java
+     *    Author: AndyRoid
+     *    Year: 2015
+     *    Availability: https://stackoverflow.com/a/30417883
+     *
+     ***************************************************************************************/
     public List<String> read(String path) {
         List<String> mLines = new ArrayList<>();
 

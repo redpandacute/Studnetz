@@ -7,7 +7,7 @@ import hirtz.florian.matura.ksa.studnetz.activities.main.MainActivity;
 import hirtz.florian.matura.ksa.studnetz.util.ProfilePictureLoader;
 
 /**
- * Created by ingli on 12.08.2018.
+ * Created by Florian Hirtz on 12.08.2018.
  */
 
 class OnScrollResultsListener extends RecyclerView.OnScrollListener {
@@ -46,10 +46,6 @@ class OnScrollResultsListener extends RecyclerView.OnScrollListener {
                 }
             }
         }
-            // Load more if we have reach the end to the recyclerView
-            //if (recyclerView.getAdapter().getItemViewType(2) && firstVisibleItemPosition >= 0) {
-            //loadMoreItems();
-            //}
     }
 }
 

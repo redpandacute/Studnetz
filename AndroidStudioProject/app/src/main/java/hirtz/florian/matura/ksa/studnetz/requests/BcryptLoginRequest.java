@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by ingli on 04.10.2018.
+ * Created by Florian Hirtz on 04.10.2018.
  */
 
 public class BcryptLoginRequest extends StringRequest{
@@ -23,5 +23,5 @@ public class BcryptLoginRequest extends StringRequest{
     }
 
     @Override
-    public Map<String, String> getParams() { System.out.println("params:" + params); return params; }
+    public Map<String, String> getParams() { return params; }
 }

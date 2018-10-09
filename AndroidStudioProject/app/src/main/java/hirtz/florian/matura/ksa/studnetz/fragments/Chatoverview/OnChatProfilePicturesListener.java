@@ -10,7 +10,7 @@ import hirtz.florian.matura.ksa.studnetz.models.UserModel;
 import hirtz.florian.matura.ksa.studnetz.util.TempFileGenerator;
 
 /**
- * Created by ingli on 16.08.2018.
+ * Created by Florian Hirtz on 16.08.2018.
  */
 
 public class OnChatProfilePicturesListener implements ProfilePicturesOnResponseListener {
@@ -35,7 +35,6 @@ public class OnChatProfilePicturesListener implements ProfilePicturesOnResponseL
     @Override
     public void onResponse(String response) {
         try {
-            System.out.println(response);
             JSONObject jsn = new JSONObject(response);
             if(jsn.getBoolean("success")) {
                 JSONArray data = jsn.getJSONArray("data");

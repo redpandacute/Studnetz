@@ -65,16 +65,6 @@ public class ChatoverviewFragment extends Fragment implements LoaderFragment {
     @Override
     public void onStart() {
         super.onStart();
-
-        /*final ChatOverviewFirebaseAdapter mAdapter = new ChatOverviewFirebaseAdapter(
-                OpenChatModel.class,
-                R.layout.openchat_listelement,
-                OpenChatViewHolder.class,
-                mActivity.getMainProfileFirebaseRef().child("chats/"),
-                this
-        );
-        */
-
         ChatoverviewAdapter mAdapter = new ChatoverviewAdapter(this);
         mRecyclerView.setHasFixedSize(false);
         mRecyclerView.setAdapter(mAdapter);

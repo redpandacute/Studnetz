@@ -1,8 +1,8 @@
 package hirtz.florian.matura.ksa.studnetz.activities.login;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
@@ -23,9 +23,6 @@ import hirtz.florian.matura.ksa.studnetz.requests.BcryptLoginRequest;
 import hirtz.florian.matura.ksa.studnetz.util.TempFileGenerator;
 
 public class LoginActivity extends AppCompatActivity {
-
-    private static String password, username;
-    private RequestQueue queue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,15 +92,10 @@ public class LoginActivity extends AppCompatActivity {
                 JSONObject json_response = new JSONObject(response);
                 boolean success = json_response.getBoolean("success");
 
-                System.out.println(json_response);
-
                 if (success) {
                     String tempPath = new TempFileGenerator().getTempFilePath(getBaseContext(), json_response.getString("blob_profilepicture_big"));
-                    System.out.println(tempPath);
                     json_response.remove("blob_profilepicture_big");
                     json_response.put("temp_profilepicture_path", tempPath);
-                    System.out.println("TEST::: " + json_response);
-                    //Intent login_intent = new Intent(LoginActivity.this, MainpageActivity.class);
                     Intent login_intent = new Intent(LoginActivity.this, MainActivity.class);
                     login_intent.putExtra("clientInfo", json_response.toString());
                     //Starting activity

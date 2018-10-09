@@ -12,7 +12,7 @@ import hirtz.florian.matura.ksa.studnetz.activities.main.MainActivity;
 import hirtz.florian.matura.ksa.studnetz.models.ChatModel;
 
 /**
- * Created by ingli on 12.08.2018.
+ * Created by Florian Hirtz on 12.08.2018.
  */
 
 class OnSendListener implements View.OnClickListener {

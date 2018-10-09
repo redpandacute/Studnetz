@@ -1,7 +1,5 @@
 package hirtz.florian.matura.ksa.studnetz.fragments.Searchoverview;
 
-import android.app.Fragment;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -23,7 +21,7 @@ import hirtz.florian.matura.ksa.studnetz.requests.SearchRequest;
 import hirtz.florian.matura.ksa.studnetz.util.JSONtoInfo;
 
 /**
- * Created by ingli on 12.08.2018.
+ * Created by Florian Hirtz 12.08.2018.
  */
 
 public class OnSearchListener implements View.OnClickListener {

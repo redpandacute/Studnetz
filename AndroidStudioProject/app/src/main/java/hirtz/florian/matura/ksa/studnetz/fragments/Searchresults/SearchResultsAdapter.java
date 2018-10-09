@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-
 import java.io.File;
 
 import hirtz.florian.matura.ksa.studnetz.R;
@@ -17,7 +16,7 @@ import hirtz.florian.matura.ksa.studnetz.models.UserModel;
 import hirtz.florian.matura.ksa.studnetz.util.TempFileGenerator;
 
 /**
- * Created by ingli on 12.08.2018.
+ * Created by Florian Hirtz on 12.08.2018.
  */
 
 class SearchResultsAdapter extends RecyclerView.Adapter<ResultViewHolder> {

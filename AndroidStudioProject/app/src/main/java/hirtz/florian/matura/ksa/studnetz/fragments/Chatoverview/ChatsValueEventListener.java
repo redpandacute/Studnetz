@@ -16,7 +16,7 @@ import hirtz.florian.matura.ksa.studnetz.util.ProfilePictureLoader;
 import hirtz.florian.matura.ksa.studnetz.util.TempFileGenerator;
 
 /**
- * Created by ingli on 19.08.2018.
+ * Created by Florian Hirtz on 19.08.2018.
  */
 
 class ChatsValueEventListener implements ValueEventListener {
@@ -37,8 +37,6 @@ class ChatsValueEventListener implements ValueEventListener {
 
     @Override
     public void onDataChange(DataSnapshot dataSnapshot) {
-        //long count = dataSnapshot.getChildrenCount();
-        // TODO: show the count in the UI
         Iterator<DataSnapshot> mSnapshots = dataSnapshot.getChildren().iterator();
         if(mFragment.isResumed()) {
             TempFileGenerator gen = new TempFileGenerator();

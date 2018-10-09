@@ -16,7 +16,7 @@ import hirtz.florian.matura.ksa.studnetz.models.ChatModel;
 import hirtz.florian.matura.ksa.studnetz.models.UserModel;
 
 /**
- * Created by ingli on 12.08.2018.
+ * Created by Florian Hirtz on 12.08.2018.
  */
 
 class OnOpenChatListener implements View.OnClickListener {
@@ -35,8 +35,6 @@ class OnOpenChatListener implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
-        //DatabaseReference databaseSenderReference = FirebaseDatabase.getInstance().getReference(String.format("Users/%d/%d>>%d", mMainprofileModel.getId(), mMainprofileModel.getId(), mMainprofileModel.getId()));
-        //DatabaseReference databaseReceiverReference = FirebaseDatabase.getInstance().getReference(String.format("Users/%d/%d>>%d", mOpenuserModel.getId(), mOpenuserModel.getId(), mOpenuserModel.getId()));
         DatabaseReference chatsRef = FirebaseDatabase.getInstance().getReference("Chats");
 
         chatsRef.addListenerForSingleValueEvent(new ValueEventListener() {

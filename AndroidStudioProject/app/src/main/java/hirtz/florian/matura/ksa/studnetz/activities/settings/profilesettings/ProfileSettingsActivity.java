@@ -7,13 +7,13 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -149,12 +149,6 @@ public class ProfileSettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        /*if (requestCode == 0 && resultCode == RESULT_OK) {
-            CropImage();
-        } else if(requestCode == 1 && data != null) {
-            imageURI = data.getData();
-            CropImage();
-        } else */
         if(requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK) {
@@ -166,7 +160,6 @@ public class ProfileSettingsActivity extends AppCompatActivity {
                 picture_small = new ProfilePictureModel(getBaseContext(), new File(small_temp_path));
                 picture_small.compress(QUALITY_SMALL);
                 picture_small.downscale(SCALE_SMALL);
-                //System.out.println("BASE64" + picture_big.getBASE64());
 
                 BcryptSaveSettingsRequest request = new BcryptSaveSettingsRequest(
                         clientInfo.getId(),
@@ -259,7 +252,16 @@ public class ProfileSettingsActivity extends AppCompatActivity {
         }
     }
 
-    //https://github.com/jkwiecien/EasyImage
+
+    /***************************************************************************************
+     *    Title: EasyImage
+     *    Author: Jacek (jkwiecien)
+     *    Year: 2017
+     *    Code version: 2.0.4
+     *    Availability: https://github.com/jkwiecien/EasyImage
+     *
+     ***************************************************************************************/
+
     private void openChooserGalleryCamera() {
         EasyImage.openChooserWithGallery(ProfileSettingsActivity.this, getString(R.string.chooseOption_caption), 0);
     }
@@ -303,7 +305,6 @@ public class ProfileSettingsActivity extends AppCompatActivity {
             String name = name_et.getText().toString();
             String firstname = firstname_et.getText().toString();
             String description = description_et.getText().toString();
-            System.out.println("DESC: " + description);
 
             String school = school_sp.getSelectedItem().toString();
 
@@ -371,7 +372,6 @@ public class ProfileSettingsActivity extends AppCompatActivity {
         public void onResponse(String response) {
             try {
                 JSONObject jsn = new JSONObject(response);
-                System.out.println("PD CHANGE:: " + response);
                 if(jsn.getBoolean("success")) {
                     clientInfo.setTempProfilePicturePath(tempFile.getPath());
                     clientInfo.updateJSON();

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by ingli on 04.10.2018.
+ * Created by Florian Hirtz on 04.10.2018.
  */
 
 public class BcryptRegisterRequest extends StringRequest {

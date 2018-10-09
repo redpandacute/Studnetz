@@ -1,8 +1,8 @@
 package hirtz.florian.matura.ksa.studnetz.activities.register;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -69,7 +69,7 @@ public class RegisterActivity extends AppCompatActivity {
         public void onResponse(String response) {
 
             try {
-                System.out.println(response);
+                System.out.println("Register Response: " + response);
                 JSONObject json_response = new JSONObject(response);
                 boolean success = json_response.getBoolean("success");
 

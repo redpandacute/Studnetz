@@ -10,7 +10,7 @@ import hirtz.florian.matura.ksa.studnetz.models.UserModel;
 
 
 /**
- * Created by ingli on 12.08.2018.
+ * Created by Florian Hirtz on 12.08.2018.
  */
 
 class ResultViewHolder extends RecyclerView.ViewHolder{

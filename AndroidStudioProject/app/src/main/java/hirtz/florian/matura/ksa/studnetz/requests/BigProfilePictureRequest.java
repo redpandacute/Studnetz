@@ -1,7 +1,5 @@
 package hirtz.florian.matura.ksa.studnetz.requests;
 
-import android.app.VoiceInteractor;
-
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
 
@@ -9,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by ingli on 17.07.2018.
+ * Created by Florian Hirtz on 17.07.2018.
  */
 
 public class BigProfilePictureRequest extends StringRequest {

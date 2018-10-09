@@ -9,7 +9,7 @@ import hirtz.florian.matura.ksa.studnetz.R;
 
 
 /**
- * Created by ingli on 12.08.2018.
+ * Created by Florian Hirtz on 12.08.2018.
  */
 
 class ChatMessageHolder extends RecyclerView.ViewHolder {
@@ -48,9 +48,5 @@ class ChatMessageHolder extends RecyclerView.ViewHolder {
             TextView mTime_tv = view.findViewById(R.id.sendingtime_left_textview);
             mTime_tv.setText(messageTime);
         }
-
-        //TextView mUser_tv = view.findViewById(R.id.messagesender_textview);
-        //mUser_tv.setText(messageUser);
-
     }
 }

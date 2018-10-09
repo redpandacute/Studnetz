@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
     private Bundle extras;
 
     private UserModel mainprofileModel, openprofileModel;
-    //private ProfilePictureModel mainprofilePicture, openprofilePicture;
     private ChatModel openChat;
     private UserModel[] searchResultDataset;
 

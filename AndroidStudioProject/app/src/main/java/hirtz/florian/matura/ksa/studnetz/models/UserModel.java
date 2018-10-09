@@ -6,7 +6,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by Flo on 18.02.2018.
+ * Created by Florian Hirtz on 18.02.2018.
  */
 
 public class UserModel {
@@ -97,18 +97,6 @@ public class UserModel {
 
         this.temp_profilepicture_path = temp_profilepicture_path;
     }
-    /*
-    private Bitmap decodeProfilePicture(String encodedProfilePicture) {
-        if(!encodedProfilePicture.equals("0")) {
-            byte[] decodedString = Base64.decode(encodedProfilePicture, Base64.DEFAULT);
-            Bitmap data = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-            return data;
-        } else {
-            Bitmap data = BitmapFactory.decodeResource(context.getResources(), R.drawable.bi_medal);
-            return data;
-        }
-    }
-*/
 
     public String getJSON() {
         return JSON;
@@ -206,7 +194,6 @@ public class UserModel {
 
     public String getSchool() {
         return this.school;
-        //return school;
     }
 
     public void setSchool(String school) {

@@ -3,7 +3,6 @@ package hirtz.florian.matura.ksa.studnetz.fragments.Chat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.Query;
@@ -13,7 +12,7 @@ import hirtz.florian.matura.ksa.studnetz.models.ChatModel;
 import hirtz.florian.matura.ksa.studnetz.models.UserModel;
 
 /**
- * Created by ingli on 12.08.2018.
+ * Created by Florian Hirtz on 12.08.2018.
  */
 
 class FirebaseChatAdapter extends FirebaseRecyclerAdapter<ChatMessageModel, ChatMessageHolder> {

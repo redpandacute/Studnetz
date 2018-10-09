@@ -11,7 +11,7 @@ import hirtz.florian.matura.ksa.studnetz.requests.SmallProfilePicturesRequest;
 
 
 /**
- * Created by ingli on 13.08.2018.
+ * Created by Florian Hirtz on 13.08.2018.
  */
 
 public class ProfilePictureLoader {
@@ -32,7 +32,6 @@ public class ProfilePictureLoader {
 
         for(int n = start; n < amount; n++) {
             ids[n] = mDataset[n].getId();
-            System.out.println(ids[n]);
         }
 
         SmallProfilePicturesRequest request = new SmallProfilePicturesRequest(ids, mResponseListener);

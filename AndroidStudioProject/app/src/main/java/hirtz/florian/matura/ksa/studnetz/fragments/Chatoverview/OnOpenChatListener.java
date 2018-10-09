@@ -2,7 +2,6 @@ package hirtz.florian.matura.ksa.studnetz.fragments.Chatoverview;
 
 import android.view.View;
 
-
 import com.google.firebase.database.DatabaseReference;
 
 import hirtz.florian.matura.ksa.studnetz.activities.main.MainActivity;
@@ -11,7 +10,7 @@ import hirtz.florian.matura.ksa.studnetz.models.ChatModel;
 
 
 /**
- * Created by ingli on 20.08.2018.
+ * Created by Florian Hirtz on 20.08.2018.
  */
 
 class OnOpenChatListener implements View.OnClickListener {
@@ -34,6 +33,5 @@ class OnOpenChatListener implements View.OnClickListener {
         mActivity.setOpenChat(new ChatModel(mActivity.getMainprofileModel(), mModel.getUserModel(), senderRef, receiverRef, chatRef));
         mActivity.setFragment(new OpenChatFragment());
         mFragment.onPause();
-        //mModel.getSenderRef().child("read").setValue(1);
     }
 }

@@ -12,7 +12,7 @@ import hirtz.florian.matura.ksa.studnetz.R;
 import hirtz.florian.matura.ksa.studnetz.models.ProfilePictureModel;
 
 /**
- * Created by ingli on 19.08.2018.
+ * Created by Florian Hirtz on 19.08.2018.
  */
 
 class ChatoverviewAdapter extends RecyclerView.Adapter<OpenChatViewHolder>{

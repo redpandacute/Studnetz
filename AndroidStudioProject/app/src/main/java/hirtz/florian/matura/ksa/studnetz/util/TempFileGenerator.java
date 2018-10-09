@@ -18,7 +18,6 @@ public class TempFileGenerator {
     public String getTempFilePath(Context mContext, String blob) {
         if(!blob.equals("0") && !blob.equals("") && blob != null) {
             try {
-                //System.out.println("blob: " + blob);
                 ProfilePictureModel picture = new ProfilePictureModel(mContext, blob);
                 return picture.getPath();
             } catch (Exception e) {
@@ -27,14 +26,20 @@ public class TempFileGenerator {
         }
 
         Bitmap PBDummy = drawableToBitmap(mContext.getResources().getDrawable(R.mipmap.profilepicture_placeholder_round));
-        //Bitmap PBDummy = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.profilepicture_placeholder);
-        System.out.println("BITMAP: " + PBDummy);
         ProfilePictureModel picture = new ProfilePictureModel(mContext, PBDummy);
 
         return picture.getPath();
     }
 
-    //https://stackoverflow.com/questions/3035692/how-to-convert-a-drawable-to-a-bitmap
+
+    /***************************************************************************************
+     *    Title: How to convert a Drawable to a Bitmap?
+     *    Author: André
+     *    Year: 2012
+     *    Availability: https://stackoverflow.com/a/10600736
+     *
+     ***************************************************************************************/
+
     private static Bitmap drawableToBitmap (Drawable drawable) {
         Bitmap bitmap = null;
 

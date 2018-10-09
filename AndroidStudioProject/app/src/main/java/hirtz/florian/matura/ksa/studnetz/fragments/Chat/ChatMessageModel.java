@@ -1,7 +1,7 @@
 package hirtz.florian.matura.ksa.studnetz.fragments.Chat;
 
 /**
- * Created by Flo on 09.03.2018.
+ * Created by Florian Hirtz on 09.03.2018.
  */
 
 public class ChatMessageModel {

@@ -2,14 +2,13 @@ package hirtz.florian.matura.ksa.studnetz.util;
 
 import android.content.Context;
 
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import hirtz.florian.matura.ksa.studnetz.models.UserModel;
 
 /**
- * Created by Flo on 18.02.2018.
+ * Created by Florian Hirtz on 18.02.2018.
  */
 
 public class JSONtoInfo {
@@ -24,10 +23,6 @@ public class JSONtoInfo {
     public UserModel createNewItem(JSONObject json) {
 
         try {
-
-            System.out.println(json);
-
-
             String user_name = json.getString("user_name");
             String user_firstname = json.getString("user_firstname");
             String user_school = json.getString("user_school");
@@ -58,9 +53,7 @@ public class JSONtoInfo {
 
             try {
                 temp_profilepicture_path = json.getString("temp_profilepicture_path");
-            } catch(Exception e) {
-                System.out.println("i failed master");
-            }
+            } catch(Exception e) {}
 
             UserModel item = null;
             try {

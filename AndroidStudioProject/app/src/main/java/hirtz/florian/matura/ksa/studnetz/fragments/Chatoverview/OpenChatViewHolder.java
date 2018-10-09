@@ -1,6 +1,5 @@
 package hirtz.florian.matura.ksa.studnetz.fragments.Chatoverview;
 
-import android.media.Image;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,13 +11,11 @@ import hirtz.florian.matura.ksa.studnetz.models.UserModel;
 
 
 /**
- * Created by ingli on 13.08.2018.
+ * Created by Florian Hirtz on 13.08.2018.
  */
 
 
 class OpenChatViewHolder extends RecyclerView.ViewHolder {
-
-    //https://android.jlelse.eu/click-listener-for-recyclerview-adapter-2d17a6f6f6c9
 
     public View view;
     private UserModel userModel;

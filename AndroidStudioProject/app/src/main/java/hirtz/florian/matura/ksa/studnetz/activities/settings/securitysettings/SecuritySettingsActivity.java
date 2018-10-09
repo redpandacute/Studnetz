@@ -1,8 +1,8 @@
 package hirtz.florian.matura.ksa.studnetz.activities.settings.securitysettings;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -81,7 +81,6 @@ public class SecuritySettingsActivity extends AppCompatActivity {
             String confPW = confPW_et.getText().toString();
 
             if(!email.isEmpty() && oldPW.isEmpty() && newPW.isEmpty() && confPW.isEmpty() && email.contains(".") && email.contains("@")) {
-                //SAVEREQUEST NO PW
 
                 System.out.println("Making save request");
 

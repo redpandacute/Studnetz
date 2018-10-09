@@ -3,7 +3,7 @@ package hirtz.florian.matura.ksa.studnetz.models;
 import com.google.firebase.database.DatabaseReference;
 
 /**
- * Created by ingli on 12.08.2018.
+ * Created by Florian Hirtz on 12.08.2018.
  */
 
 public class ChatModel {

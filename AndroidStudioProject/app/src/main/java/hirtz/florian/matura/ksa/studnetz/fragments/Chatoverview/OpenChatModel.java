@@ -2,7 +2,6 @@ package hirtz.florian.matura.ksa.studnetz.fragments.Chatoverview;
 
 import android.content.Context;
 
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -14,7 +13,7 @@ import hirtz.florian.matura.ksa.studnetz.models.UserModel;
 import hirtz.florian.matura.ksa.studnetz.util.JSONtoInfo;
 
 /**
- * Created by ingli on 19.08.2018.
+ * Created by Florian Hirtz on 19.08.2018.
  */
 
 public class OpenChatModel {

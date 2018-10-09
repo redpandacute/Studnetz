@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * Created by ingli on 24.06.2018.
+ * Created by Florian Hirtz on 24.06.2018.
  */
 
 public class ProfilePictureModel {
@@ -76,7 +76,6 @@ public class ProfilePictureModel {
     public void update(Uri imageUri) {
         //...//
         String path = getPath(imageUri);
-        System.out.println(path);
         String filetype = getFileType(path);
 
         if(filetype.equals("img") || filetype.equals("jpeg") || filetype.equals("jpg") || filetype.equals("png")) {
@@ -141,8 +140,16 @@ public class ProfilePictureModel {
     }
 
 
-    //https://www.androidpit.com/forum/626144/android-image-uploading-to-server-from-gallery
-    //https://www.youtube.com/watch?v=odmC3aa210Q
+
+
+    /***************************************************************************************
+     *    Title: Android Upload Image to Server Tutorial - Creating Android Studio Project #2
+     *    Author: Belal Khan
+     *    Year: 2017
+     *    Availability: https://www.youtube.com/watch?v=odmC3aa210Q
+     *
+     ***************************************************************************************/
+
     private String getPath(Uri uri) {
         Cursor cursor = mContext.getContentResolver().query(uri, null, null, null, null);
         cursor.moveToFirst();
@@ -164,14 +171,18 @@ public class ProfilePictureModel {
         } else {
             System.out.println("Cursor failed:: " + cursor);
         }
-        //int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-        //cursor.moveToFirst();
-        //return cursor.getString(column_index);
         return null;
     }
 
 
-    //https://colinyeoh.wordpress.com/2012/05/18/android-convert-image-uri-to-byte-array/
+
+    /***************************************************************************************
+     *    Title: Android convert image uri to byte array
+     *    Author: colinyeoh
+     *    Year: 2012
+     *    Availability: https://colinyeoh.wordpress.com/2012/05/18/android-convert-image-uri-to-byte-array/
+     *
+     ***************************************************************************************/
     private byte[] getByte(Uri uri, int quality) {
         byte[] data = null;
         try {

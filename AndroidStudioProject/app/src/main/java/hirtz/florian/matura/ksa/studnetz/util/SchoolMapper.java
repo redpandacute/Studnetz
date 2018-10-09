@@ -6,7 +6,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -15,7 +14,7 @@ import java.util.Map;
 import hirtz.florian.matura.ksa.studnetz.models.UserModel;
 
 /**
- * Created by ingli on 22.08.2018.
+ * Created by Florian Hirtz on 22.08.2018.
  */
 
 public class SchoolMapper {
@@ -99,10 +98,8 @@ public class SchoolMapper {
         ArrayList<String> mSchools = new ArrayList<>();
 
         mSchools.add(mModel.getSchool());
-        System.out.println("model school: " + mModel.getSchool());
 
         for(int n = 1; n < mMap.size(); n++) {
-            System.out.println("School keySet: " + keySet[n]);
             if(!keySet[n].equals(mModel.getSchool())) {
                 mSchools.add(keySet[n]);
             }
@@ -113,8 +110,6 @@ public class SchoolMapper {
 
         int mGrades = mMap.get(mModel.getSchool());
         ArrayList<Integer> mGradesList = new ArrayList<>();
-
-        //mGradesList.add(mModel.getGrade());
 
         for(int n = 1; n <= mGrades; n++) {
             mGradesList.add(n);
@@ -154,8 +149,6 @@ public class SchoolMapper {
             }
         });
 
-        //gradeSpinner.setAdapter(gradeAdapter);
-        //gradeSpinner.setSelection(mModel.getGrade() - 1, false);
         schoolSpinner.setAdapter(schoolAdapter);
     }
 }

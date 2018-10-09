@@ -1,18 +1,15 @@
 package hirtz.florian.matura.ksa.studnetz.requests;
 
-import android.os.Build;
-
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by ingli on 12.07.2018.
+ * Created by Florian Hirtz on 12.07.2018.
  */
 
 public class SmallProfilePicturesRequest extends StringRequest {
