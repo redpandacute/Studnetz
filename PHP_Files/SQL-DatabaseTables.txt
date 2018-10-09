@@ -1,0 +1,48 @@
+//-- user_archive --//
+
+CREATE TABLE IF NOT EXISTS `user_archive` ( 
+`user_id` int(8) NOT NULL AUTO_INCREMENT,
+`user_username` varchar(18) NOT NULL,
+`user_name` varchar(18) NOT NULL,
+`user_firstname` varchar(18) NOT NULL,  
+`user_school` varchar(64) NOT NULL,  
+`user_grade` tinyint(1) NOT NULL,  
+`user_email` varchar(254) NOT NULL,  
+`user_description` text NOT NULL,  
+PRIMARY KEY (`user_id`),  
+UNIQUE KEY `user_username` (`user_username`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+
+//-- user_hashes --//
+
+CREATE TABLE IF NOT EXISTS `user_hashes` (
+  `user_id` int(8) NOT NULL,
+  `hash_password` blob NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+//-- user_profilepictures --//
+
+CREATE TABLE IF NOT EXISTS `user_profilepictures` (
+  `user_id` int(8) NOT NULL,
+  `blob_profilepicture_big` mediumblob NOT NULL,
+  `blob_profilepicture_small` mediumblob NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+//-- user_subjects --//
+
+CREATE TABLE IF NOT EXISTS `user_subjects` (
+  `user_id` int(8) NOT NULL,
+  `subj_german` tinyint(1) NOT NULL DEFAULT 0,
+  `subj_spanish` tinyint(1) NOT NULL DEFAULT 0,
+  `subj_english` tinyint(1) NOT NULL DEFAULT 0,
+  `subj_french` tinyint(1) NOT NULL DEFAULT 0,
+  `subj_biology` tinyint(1) NOT NULL DEFAULT 0,
+  `subj_chemistry` tinyint(1) NOT NULL DEFAULT 0,
+  `subj_music` tinyint(1) NOT NULL DEFAULT 0,
+  `subj_maths` tinyint(1) NOT NULL DEFAULT 0,
+  `subj_physics` tinyint(1) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
