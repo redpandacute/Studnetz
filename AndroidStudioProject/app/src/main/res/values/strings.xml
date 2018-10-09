@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Studnetz</string>
+
+    <string name="registerhere_string">Don\'t have an account yet? Sign up <font fgcolor="#9a1d1d">here</font>!</string>
+    <string name="signin_string">Sign in</string>
+    <string name="password_string">Password</string>
+    <string name="username_string">Username</string>
+    <string name="surname_string">Firstname</string>
+    <string name="name_string">Name</string>
+    <string name="signup_string">Sign up</string>
+    <string name="confirmpassword_string">Confirm password</string>
+    <string name="email_string">E-mail</string>
+    <string name="aboutme_string">About me</string>
+    <string name="searchhint_string">Search</string>
+    <string name="school_string">School</string>
+    <string name="settings_string">Settings</string>
+    <string name="profile_string">Profile</string>
+    <string name="security_string">Security</string>
+    <string name="oldpassword_string">Old password</string>
+    <string name="newpassword_string">New password</string>
+    <string name="confnewpassword">Confirm new password</string>
+    <string name="savechanges_string">Save changes</string>
+    <string name="subjectsicanassistothersin_string">Subjects I can assist others in:</string>
+    <string name="german_string">German</string>
+    <string name="spanish_string">Spanish</string>
+    <string name="english_string">English</string>
+    <string name="french_string">French</string>
+    <string name="biology_string">Biology</string>
+    <string name="chemics">Chemistry</string>
+    <string name="physics_string">Physics</string>
+    <string name="maths_string">Maths</string>
+    <string name="music_string">Music</string>
+    <string name="filterbysubject_string">Filter by subject:</string>
+    <string name="filterbyschool_string">Filter by school:</string>
+    <string name="searchforname_string">Search for a name:</string>
+    <string name="title_result_list">results</string>
+    <string name="title_result_detail">result Detail</string>
+
+    <string name="mainpage_title">Your profile</string>
+    <string name="userprofile_title">\'s profile</string>
+    <string name="login_title">Login</string>
+    <string name="register_title">Register</string>
+    <string name="filter_title">Specify your search:</string>
+    <string name="searchresults_title">Searchresults</string>
+    <string name="chat_title">Chat with</string>
+    <string name="contact_button">Open a chat</string>
+    <string name="settingsOverview_title">Settings</string>
+    <string name="profileSettings_title">Profile settings</string>
+    <string name="selectfromgallery_title">Select image from gallery</string>
+    <string name="chooseimage_title">Profile photo</string>
+    <string name="securitySettings_title">Security and privacy settings</string>
+    <string name="profileSettings_cat">Profile</string>
+    <string name="securitySettings_cat">Security</string>
+    <string name="privacy_string">Privacy</string>
+    <string name="search_title">Search for a tutor</string>
+    <string name="chooseOption_caption">Choose one option</string>
+    <string name="logout_string">Logout</string>
+    <string name="searchoverview_botnav">Search</string>
+    <string name="userprofile_botnav">Profile</string>
+    <string name="chatoverview_botnav">Chats</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chatoverview_title">Your chats</string>
+    <string name="grade">Grade</string>
+</resources>

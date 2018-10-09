@@ -1,0 +1,8 @@
+- Select a School here -:0
+Kantonsschule Ausserschwyz Pfaeffikon:4
+Kantonsschule Ausserschwyz Nuolen:4
+Kantonsschule Kollegium Schwyz:4
+Stiftschule Einsiedeln:6
+Gymnasium Immensee:6
+Theresianum Ingenbohl:4
+Currently not in school:0

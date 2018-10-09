@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#274156</color>
+    <color name="colorPrimary">#1C6E8C</color>
+    <color name="colorLight">#545F66</color>
+    <color name="colorGray">#545F66</color>
+    <color name="colorAccent">#2D707F</color>
+    <color name="colorRed">#ff3333</color>
+    <color name="colorRedDarker">#ff1a1a</color>
+    <color name="toolbar_color_control_normal">#ffffff</color>
+    <color name="ic_launcher_background">#11908f </color>
+    <color name="notification">#513750</color>
+    <color name="message_left">#513750</color>
+    <color name="message_right">#806D7F</color>
+
+</resources>

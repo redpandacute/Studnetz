@@ -1,0 +1,206 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hirtz.florian.matura.ksa.studnetz.fragments.Searchoverview.SearchoverviewFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/searchoverview_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ToolbarTheme"
+            app:titleTextColor="#ffffff"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+        <CheckBox
+            android:id="@+id/searchoverview_biology_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/biology_string"
+            app:layout_constraintBottom_toTopOf="@+id/searchoverview_maths_checkbox"
+            app:layout_constraintStart_toStartOf="@+id/searchoverview_maths_checkbox" />
+
+        <CheckBox
+            android:id="@+id/searchoverview_maths_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/maths_string"
+            app:layout_constraintBottom_toTopOf="@+id/searchoverview_searchbutton_imagebutton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/searchoverview_searchbutton_imagebutton"
+            android:layout_width="98dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98"
+            app:srcCompat="@drawable/search_icon" />
+
+        <CheckBox
+            android:id="@+id/searchoverview_spanish_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spanish_string"
+            app:layout_constraintBottom_toTopOf="@+id/searchoverview_biology_checkbox"
+            app:layout_constraintStart_toStartOf="@+id/searchoverview_biology_checkbox" />
+
+        <CheckBox
+            android:id="@+id/searchoverview_german_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="@string/german_string"
+            app:layout_constraintEnd_toStartOf="@+id/searchoverview_spanish_checkbox"
+            app:layout_constraintTop_toTopOf="@+id/searchoverview_spanish_checkbox" />
+
+        <CheckBox
+            android:id="@+id/searchoverview_french_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/french_string"
+            app:layout_constraintStart_toStartOf="@+id/searchoverview_german_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/searchoverview_german_checkbox" />
+
+        <CheckBox
+            android:id="@+id/searchoverview_music_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/music_string"
+            app:layout_constraintStart_toStartOf="@+id/searchoverview_french_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/searchoverview_french_checkbox" />
+
+        <CheckBox
+            android:id="@+id/searchoverview_english_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="@string/english_string"
+            app:layout_constraintStart_toEndOf="@+id/searchoverview_spanish_checkbox"
+            app:layout_constraintTop_toTopOf="@+id/searchoverview_spanish_checkbox" />
+
+        <CheckBox
+            android:id="@+id/searchoverview_chemistry_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chemics"
+            app:layout_constraintStart_toStartOf="@+id/searchoverview_english_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/searchoverview_english_checkbox" />
+
+        <CheckBox
+            android:id="@+id/searchoverview_physics_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/physics_string"
+            app:layout_constraintStart_toStartOf="@+id/searchoverview_chemistry_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/searchoverview_chemistry_checkbox" />
+
+        <TextView
+            android:id="@+id/searchoverview_filterbysubject_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/filterbysubject_string"
+            app:layout_constraintBottom_toTopOf="@+id/searchoverview_spanish_checkbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/searchoverview_filterbyschool_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/searchoverview_filterbysubject_textview"
+            app:layout_constraintEnd_toStartOf="@id/searchoverview_grade_spinner"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/searchoverview_grade_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/searchoverview_filterbysubject_textview"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/searchoverview_filterbyschool_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/filterbyschool_string"
+            app:layout_constraintBottom_toTopOf="@+id/searchoverview_filterbyschool_spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/searchoverview_searchforname_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="@string/name_string"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/searchoverview_filterbyschool_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/searchoverview_searchforname_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/searchforname_string"
+            app:layout_constraintBottom_toTopOf="@+id/searchoverview_searchforname_edittext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/searchoverview_searchicon_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/searchoverview_searchforname_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchoverview_toolbar"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

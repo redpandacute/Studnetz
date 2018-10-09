@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/searchoverview_botnav"
+        android:icon="@drawable/ic_searchoverview_botnav"
+        android:title="@string/searchoverview_botnav" />
+
+    <item
+        android:id="@+id/mainprofile_botnav"
+        android:title="@string/userprofile_botnav"
+        android:icon="@drawable/ic_mainprofile_botnav" />
+
+    <item
+        android:id="@+id/chatoverview_botnav"
+        android:title="@string/chatoverview_botnav"
+        android:icon="@drawable/ic_chatoverview_botnav" />
+
+</menu>

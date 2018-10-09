@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hirtz.florian.matura.ksa.studnetz.activities.register.RegisterActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/register_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ToolbarTheme"
+        app:titleTextColor="#ffffff"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_toolbar">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+
+            <Button
+                android:id="@+id/registeract_signup_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/signup_string"
+                app:layout_constraintEnd_toEndOf="@+id/registeract_confpassword_edittext"
+                app:layout_constraintStart_toStartOf="@+id/registeract_confpassword_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/registeract_termsofservice_checkbox" />
+
+            <CheckBox
+                android:id="@+id/registeract_termsofservice_checkbox"
+                android:layout_width="277dp"
+                android:layout_height="21dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="CheckBox"
+                app:layout_constraintEnd_toEndOf="@+id/registeract_confpassword_edittext"
+                app:layout_constraintStart_toStartOf="@+id/registeract_confpassword_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/registeract_confpassword_edittext" />
+
+            <EditText
+                android:id="@+id/registeract_password_edittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="32"
+                android:maxLength="32"
+                android:hint="@string/password_string"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="@+id/registeract_email_edittext"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/registeract_email_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/registeract_password_textview" />
+
+            <EditText
+                android:id="@+id/registeract_confpassword_edittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="32"
+                android:maxLength="32"
+                android:hint="@string/confirmpassword_string"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="@+id/registeract_password_edittext"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/registeract_password_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/registeract_confpassword_textview" />
+
+            <EditText
+                android:id="@+id/registeract_email_edittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="254"
+                android:maxLength="254"
+                android:hint="@string/email_string"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="@+id/registeract_username_edittext"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/registeract_school_spinner"
+                app:layout_constraintTop_toBottomOf="@+id/registeract_email_textview" />
+
+            <EditText
+                android:id="@+id/registeract_name_edittext"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:ems="18"
+                android:maxLength="18"
+                android:hint="@string/name_string"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/registeract_firstname_edittext"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/registeract_firstname_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/registeract_name_textview" />
+
+            <EditText
+                android:id="@+id/registeract_firstname_edittext"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="46dp"
+                android:ems="18"
+                android:maxLength="18"
+                android:hint="@string/surname_string"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <EditText
+                android:id="@+id/registeract_username_edittext"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:ems="18"
+                android:maxLength="18"
+                android:hint="@string/username_string"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/registeract_name_edittext"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/registeract_name_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/registeract_username_textview" />
+
+            <TextView
+                android:id="@+id/registeract_school_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/school_string"
+                app:layout_constraintTop_toBottomOf="@+id/registeract_username_edittext"
+                app:layout_constraintStart_toStartOf="@id/registeract_username_edittext"/>
+
+            <TextView
+                android:id="@+id/registeract_grade_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/grade"
+                app:layout_constraintStart_toStartOf="@id/registeract_grade_spinner"
+                app:layout_constraintBottom_toTopOf="@+id/registeract_school_spinner"/>
+            <Spinner
+                android:id="@+id/registeract_grade_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/registeract_school_spinner"
+                app:layout_constraintEnd_toEndOf="@id/registeract_username_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/registeract_school_textview" />
+
+            <Spinner
+                android:id="@+id/registeract_school_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/registeract_grade_spinner"
+                app:layout_constraintStart_toStartOf="@+id/registeract_username_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/registeract_school_textview" />
+
+            <TextView
+                android:id="@+id/registeract_email_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/email_string"
+                app:layout_constraintStart_toStartOf="@+id/registeract_email_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/registeract_school_spinner" />
+
+            <TextView
+                android:id="@+id/registeract_name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_string"
+                app:layout_constraintStart_toStartOf="@+id/registeract_name_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/registeract_firstname_edittext" />
+
+            <TextView
+                android:id="@+id/registeract_username_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username_string"
+                app:layout_constraintStart_toStartOf="@+id/registeract_username_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/registeract_name_edittext" />
+
+            <TextView
+                android:id="@+id/registeract_firstname_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/surname_string"
+                app:layout_constraintBottom_toTopOf="@+id/registeract_firstname_edittext"
+                app:layout_constraintStart_toStartOf="@+id/registeract_firstname_edittext" />
+
+            <TextView
+                android:id="@+id/registeract_password_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password_string"
+                app:layout_constraintStart_toStartOf="@+id/registeract_password_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/registeract_email_edittext" />
+
+            <TextView
+                android:id="@+id/registeract_confpassword_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/confirmpassword_string"
+                app:layout_constraintStart_toStartOf="@+id/registeract_confpassword_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/registeract_password_edittext" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
