@@ -25,24 +25,25 @@
 	$user_password = $_POST["user_password"];
 	
 	//VALIDATION---------------
-	$patternspaced = '/^[a-zA-Z0-9 \s]+$/';
-	$pattern = '/^[a-zA-Z0-9\s]+$/';
-	$patternemail = '/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]+$/';
+	$patternspaced = '/^[a-zA-Z0-9 äöüÄÖÜ\s]+$/';
+	$pattern = '/^[a-zA-Z0-9äöüÄÖÜ\s]+$/';
+	$patternPW = '/^[a-zA-Z0-9 \s]+$/';
+	$patternemail = '/^[a-zA-Z0-9_.+-äöüÄÖÜ]+@[a-zA-Z0-9.-äöüÄÖÜ]+.[a-zA-Z]+$/';
 	
 	$valid = true;
 	$errorstring = "";
 	
-	if(empty($user_username) || !preg_match($pattern, $user_username) || strlen($user_username) > 18) {
+	if(empty($user_username) || !preg_match($pattern, $user_username) || strlen($user_username) >= 18) {
 		$valid = false;
 		$errorstring .= '406:1';
 	}
 	
-	if(empty($user_firstname) || !preg_match($patternspaced, $user_firstname) || strlen($user_firstname) > 18) {
+	if(empty($user_firstname) || !preg_match($patternspaced, $user_firstname) || strlen($user_firstname) >= 18) {
 		$valid = false;
 		$errorstring .= '406:2';
 	}
 	
-	if(empty($user_name) || !preg_match($patternspaced, $user_name) || strlen($user_name) > 18) {
+	if(empty($user_name) || !preg_match($patternspaced, $user_name) || strlen($user_name) >= 18) {
 		$valid = false;
 		$errorstring .= '406:3';
 	}
@@ -50,6 +51,11 @@
 	if(empty($user_email) || !preg_match($patternemail, $user_email) || strlen($user_email) > 255) {
 		$valid = false;
 		$errorstring .= '406:4';
+	}
+	
+	if(empty($user_password) || !preg_match($patternPW, $user_password) || strlen($user_password) >= 64) {
+		$valid = false;
+		$errorstring .= '406:5';
 	}
 	//-------------------------
 	
@@ -63,7 +69,7 @@
 	
 	if(mysqli_stmt_num_rows($statement) > 0) {
 		$valid = false;
-		$errorstring .= '406:5';
+		$errorstring .= '406:6';
 	}
 	
 	if (!$valid) {
@@ -71,7 +77,7 @@
 		//TODO username or email exists already
 		$response = array();
 		$response['success'] = false;
-		$response['error'] = str_split($errorstring, 5);
+		$response['error_log'] = str_split($errorstring, 5);
 		
 		print_r(json_encode($response));
 		
@@ -117,24 +123,7 @@
 		
 		mysqli_stmt_close($subj_statement);
 		
-		//INSERT NEW USER INTO HASH TABLE
-		/*$statement = mysqli_prepare($conn,"INSERT INTO user_hashes(user_id, hash_password, hash_salt) VALUES (?,?,?)");
-										 
-		/mysqli_stmt_bind_param($statement, "iss", $user_id, $hash_password, $hash_salt);
-		mysqli_stmt_execute($statement);
-		
-		mysqli_stmt_close($statement);
-		*/
-		
 		$statement = mysqli_prepare($conn, "INSERT INTO user_hashes(user_id, hash_password) VALUES (?,?)");
-		
-		/*
-		$options = array(
-			'cost' => 11
-		);
-		
-		$hash_password = password_hash($user_password, PASSWORD_BCRYPT, $options);
-		*/
 		
 		$lib = new PasswordLib\PasswordLib();
 		$hash_password = $lib->createPasswordHash($user_password, '$2a$', array('cost' => 11));

@@ -60,7 +60,7 @@
 			mysqli_stmt_bind_result($statement, 
 				$id, $username, $name, $firstname, $school, $grade, $email, $description, 
 				$id, $german, $spanish, $english, $french, $biology, $chemistry, $music, $maths, $physics, 
-				$id, $passwordhash, $salt, 
+				$id, $passwordhash, 
 				$id, $profilepicture_big, $profilepicture_small
 			);
 		

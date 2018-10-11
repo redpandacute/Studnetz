@@ -15,22 +15,7 @@
 	$user_id = $_POST["user_id"];
 	$user_password = $_POST["user_password"];
 	$encoded_base64 = $_POST["encoded_base64"];
-/*	
-	$statement = mysqli_prepare($conn, "SELECT hash_salt FROM user_hashes WHERE user_id = ?");
-	mysqli_stmt_bind_param($statement, "i", $user_id);
-	mysqli_stmt_execute($statment);
-	
-	mysqli_stmt_store_result($statment);
-	mysqli_stmt_bind_result($salt);
-	
-	while ($field = mysqli_stmt_fetch($statement)) {
-			$user_salt = $salt;
-	}
-	
-	mysqli_stmt_close($statement);
-	
-	//HASH 
-*/
+
 	$user_id = $_POST["user_id"];
 	$user_firstname = $_POST["user_firstname"];
 	$user_name = $_POST["user_name"];
@@ -52,14 +37,14 @@
 	
 	$password_changed = $_POST["bool_password_changed"];
 	$hash_old_password = $_POST["hash_old_password"];
-	$new_password = $_POST["hash_new_password"];
 	
 	$bool_image_changed = $_POST["bool_image_changed"];
 	
 	//VALIDATION---------------
-	$patternspaced = '/^[a-zA-Z0-9 \s]+$/';
-	$pattern = '/^[a-zA-Z0-9\s]+$/';
-	$patternemail = '/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]+$/';
+	$patternspaced = '/^[a-zA-Z0-9 äöüÄÖÜ\s]+$/';
+	$pattern = '/^[a-zA-Z0-9äöüÄÖÜ\s]+$/';
+	$patternPW = '/^[a-zA-Z0-9 \s]+$/';
+	$patternemail = '/^[a-zA-Z0-9_.+-äöüÄÖÜ]+@[a-zA-Z0-9.-äöüÄÖÜ]+.[a-zA-Z]+$/';
 	
 	$valid = true;
 	$errorstring = "";
@@ -153,7 +138,7 @@
 				
 				$lib = new PasswordLib\PasswordLib();
 				
-				if($lib->verifyPasswordHash($old_password, $check['hash'])) {
+				if($lib->verifyPasswordHash($old_password, $check['hash']) && !empty($new_password) && preg_match($patternPW, $new_password) && strlen($new_password) >= 64) {
 			
 					$statement = mysqli_prepare($conn, "UPDATE user_hashes
 						SET
@@ -188,7 +173,7 @@
 			mysqli_stmt_bind_result($statement, 
 				$id, $username, $name, $firstname, $school, $grade, $email, $description, 
 				$id, $german, $spanish, $english, $french, $biology, $chemistry, $music, $maths, $physics, 
-				$id, $passwordhash, $salt, 
+				$id, $passwordhash,
 				$id, $profilepicture_big, $profilepicture_small
 			);
 		
@@ -228,7 +213,7 @@
 	} else {
 		mysqli_stmt_close($statement);
 		$response['success'] = false;
-		$response['error_log'] = $errorstring;
+		$response['error_log'] = str_split($errorstring, 5);
 		print_r(json_encode($response));
 	}
 ?>

@@ -1,6 +1,5 @@
 <?php
 
-	//VERY INTERESTING: https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection
 //conn Details
 	$db_serverhost = "sql530.your-server.de";
 	$db_username = "efxinf_7";
@@ -27,8 +26,6 @@
 	$subj_physics = $_POST["subj_physics"];
   
 	$statement_string = "SELECT user_archive.*, user_subjects.* FROM user_archive INNER JOIN user_subjects ON user_archive.user_id = user_subjects.user_id WHERE (user_archive.user_name LIKE ? OR user_archive.user_username LIKE ? OR user_archive.user_firstname LIKE ?) AND user_archive.user_id != ?";
-  
-  
   
 	if($user_school !== '') {
 		$statement_string .= (" AND user_archive.user_school = ? AND user_archive.user_grade >= ?");
