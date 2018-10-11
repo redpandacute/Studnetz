@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Response;
 
@@ -20,6 +21,7 @@ import org.json.JSONObject;
 
 import hirtz.florian.matura.ksa.studnetz.R;
 import hirtz.florian.matura.ksa.studnetz.activities.main.MainActivity;
+import hirtz.florian.matura.ksa.studnetz.activities.register.RegisterActivity;
 import hirtz.florian.matura.ksa.studnetz.activities.settings.profilesettings.ProfileSettingsActivity;
 import hirtz.florian.matura.ksa.studnetz.activities.settings.securitysettings.SecuritySettingsActivity;
 import hirtz.florian.matura.ksa.studnetz.util.TempFileGenerator;
@@ -139,6 +141,8 @@ public class SettingsoverviewActivity extends AppCompatActivity {
                     Intent profileSettings = new Intent(mContext, ProfileSettingsActivity.class);
                     profileSettings.putExtra("clientInfo", JSON.toString());
                     mContext.startActivity(profileSettings);
+                } else {
+                    Toast.makeText(mContext, "Ooops, an error occurred, retry? Errorcodes: " + JSON.getString("error_log") , Toast.LENGTH_LONG).show();
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

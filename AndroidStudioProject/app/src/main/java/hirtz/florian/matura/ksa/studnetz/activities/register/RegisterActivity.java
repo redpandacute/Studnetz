@@ -77,7 +77,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Intent intent = new Intent(RegisterActivity.this, LoginActivity.class); //if success, change to login screen
                     RegisterActivity.this.startActivity(intent);
                 } else {
-                    Toast.makeText(RegisterActivity.this, "Ooops, something went wrong with your registration, retry?", Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegisterActivity.this, "Ooops, something went wrong with your registration, retry? Errorcodes:" + json_response.getString("error_log"), Toast.LENGTH_LONG).show();
                 }                                                                                                                                                   // retry button.
             } catch (JSONException e) {
                 e.printStackTrace();

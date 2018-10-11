@@ -45,7 +45,7 @@ class OnSearchResponseListener implements Response.Listener<String> {
                 mActivity.setFragment(mActivity.getSearchresultsFragment());
                 mActivity.changeFragmentwithBackstack(mActivity.getSearchresultsFragment(), "search");
             } else {
-                Toast.makeText(mActivity.getBaseContext(), "There was an issue with the search request (Maybe no results :3)", Toast.LENGTH_LONG);
+                Toast.makeText(mActivity.getBaseContext(), "No results could be found.", Toast.LENGTH_LONG);
             }
 
         } catch (JSONException e) {
